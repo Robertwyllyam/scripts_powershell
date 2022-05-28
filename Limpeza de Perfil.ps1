@@ -32,11 +32,14 @@ foreach($perfil in $perfis){
      $perfil | Remove-WmiObject
     
 
-     $logExclusão = "Procedimento realizado em: '$usuario'. Erro: $Error"
+     $logExclusão = "Procedimento realizado em: '$usuario'.`n"
 
      
 
 }
+
+
+$logExclusão += "`nLog de erros: $Error"
 
 
 $data = Get-Date -Format 'DD-MM-yyyy-hh-mm-ss'
